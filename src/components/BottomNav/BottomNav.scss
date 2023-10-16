@@ -1,0 +1,48 @@
+$text:#FFFFFF;
+$hovercolor:gold;
+$fontFamily:'Poppins', sans-serif;
+$bottomNavBackgroundcolor:rgb(40, 89, 69);
+$sizeNavText:10px;
+
+
+.HomeBottomNavContainer{
+    display: none;
+}
+@media (max-width:502px) {
+    .HomeBottomNavContainer{
+        display: block;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background-color:$bottomNavBackgroundcolor;
+        z-index: 1;
+        .HomeBottomNav{
+            display: flex;
+            width: 93%;
+            margin: 0 auto;
+            justify-content:space-between;
+            text-align: center;
+            padding: 5px 0px ;
+            >li{ 
+                li{
+                    color:$text;
+                    font-family: $fontFamily;
+                    font-size: $sizeNavText;
+                }
+                .HomeBottomNavAncho{
+                    text-decoration: none;  
+                    .MuiBadge-badge{
+                        background-color: red;
+                    }                                                                                                
+                }
+                .active li{
+                    color: $hovercolor;
+                }
+                ul li span{
+                    font-family: $fontFamily;
+                }
+            }
+        }
+    }
+}
+

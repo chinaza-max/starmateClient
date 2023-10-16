@@ -1,0 +1,39 @@
+.HomeBottomNavContainer {
+  display: none;
+}
+
+@media (max-width: 502px) {
+  .HomeBottomNavContainer {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgb(40, 89, 69);
+    z-index: 1;
+  }
+  .HomeBottomNavContainer .HomeBottomNav {
+    display: flex;
+    width: 93%;
+    margin: 0 auto;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px 0px;
+  }
+  .HomeBottomNavContainer .HomeBottomNav > li li {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+  }
+  .HomeBottomNavContainer .HomeBottomNav > li .HomeBottomNavAncho {
+    text-decoration: none;
+  }
+  .HomeBottomNavContainer .HomeBottomNav > li .HomeBottomNavAncho .MuiBadge-badge {
+    background-color: red;
+  }
+  .HomeBottomNavContainer .HomeBottomNav > li .active li {
+    color: gold;
+  }
+  .HomeBottomNavContainer .HomeBottomNav > li ul li span {
+    font-family: "Poppins", sans-serif;
+  }
+}/*# sourceMappingURL=BottomNav.css.map */
