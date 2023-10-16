@@ -1,0 +1,10 @@
+.carousel-container div img {
+  height: 70px;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .carousel-container div img {
+    height: 50px;
+  }
+}/*# sourceMappingURL=AchieveMentSlide.css.map */
