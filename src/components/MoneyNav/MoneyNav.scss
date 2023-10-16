@@ -1,0 +1,100 @@
+$sizeNavText:13px;
+$sizeNavTextMobile:10px;
+
+
+
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    list-style: none;
+}
+
+.MoneyNav {
+    @include flexrow;
+    
+    @media (max-width:480px) {
+        li {
+            line-height: 50px;
+        }
+    }
+
+    >li:first-child {
+        padding-right: 5px;
+        line-height: 24px;
+        @media (max-width:480px) {
+           line-height: 27px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    >li:last-child:hover {
+        cursor: pointer;
+    }
+
+    >li:last-child {
+        line-height: 27px;
+        padding-left: 6px;
+        @media (max-width:480px) {
+            line-height: 28px;
+        }
+        .refresh {
+            display: inline-block;
+            animation: load1 400ms ease-in;
+        }
+        @keyframes load1 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(100deg);
+            }
+        }
+    }
+
+    >li:nth-child(2) ul li {
+        &:nth-child(1){
+            font-size: 13px;
+            line-height: 22px;
+        }
+        @media (max-width:480px) {
+          line-height: 22px;
+        }
+    }
+
+    >li:nth-child(2) {
+        >ul>li:first-child {
+            @media (max-width:480px) {
+                font-size: 10px;
+                line-height: 27px;
+            }
+        }
+    }
+
+    .MoneyNavInput {
+        display: inline-block;
+        width: fit-content;
+        background-color: transparent;
+        border: none;
+        font-size: $sizeNavText;
+        color: #FFFFFF;
+        padding-left: 3px;
+        @media (max-width:480px) {
+            margin-right:-4px;
+        }
+
+        &:focus {
+            outline: none
+        }
+
+        @media (max-width:480px) {
+            font-size: $sizeNavTextMobile;
+            padding-left: 3px;
+        }
+    }
+
+}

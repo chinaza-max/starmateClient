@@ -1,0 +1,25 @@
+.Table2 {
+  list-style: none;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+.Table2 li {
+  width: 70px;
+  font-size: 12px;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 40px;
+}
+@media (max-width: 1000px) {
+  .Table2 li {
+    font-size: 8px;
+  }
+}
+.Table2 .changeColor {
+  color: rgba(202, 76, 76, 0.9803921569);
+}/*# sourceMappingURL=Table2.css.map */

@@ -1,0 +1,29 @@
+@mixin ul($display,$column,$gap){
+    list-style: none;
+    padding: 0px;
+    display: $display;
+    grid-template-columns:repeat($column,1fr);;
+    grid-column-gap:$gap;
+}
+
+
+.Tables{
+    width: 640px;
+    padding: 0px 5px 0px 5px;
+    background-color: rgb(241, 240, 240);
+    padding-top: 7px;
+    .head{
+        @include ul(grid,7,15px);
+        border-bottom: 1px solid rgb(222, 220, 220);
+        padding-bottom: 5px;
+        font-size: 13px;
+        li{
+            width: 70px;
+        }
+    }
+    >ul:nth-child(even){
+        height: 42px;
+        background-color: rgb(212, 225, 212);
+        padding: 3px 3px;
+    }
+}

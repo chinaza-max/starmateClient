@@ -1,0 +1,38 @@
+.Headers h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+  width: 100%;
+  overflow-x: hidden;
+}
+.Headers h2 .show {
+  color: green;
+}
+@media (max-width: 768px) {
+  .Headers h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .Headers h2 {
+    font-size: 20px;
+  }
+}
+.Headers p {
+  text-align: center;
+  color: #6E6d7a;
+  font-size: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .Headers p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .Headers p {
+    max-width: 95%;
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=Headers.css.map */

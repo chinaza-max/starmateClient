@@ -1,0 +1,26 @@
+.MediaController {
+  border: 1px solid red;
+}
+.MediaController .container {
+  list-style: none;
+  display: flex;
+}
+.MediaController .container > li {
+  flex: 1;
+  border: 1px solid blue;
+}
+.MediaController .container .countCountDown ul {
+  list-style: none;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid pink;
+}
+.MediaController .container .countCountDown ul li {
+  width: 25px;
+  text-align: center;
+}
+.MediaController .container .countCountDown ul li span {
+  text-align: center;
+  width: 100%;
+}/*# sourceMappingURL=MediaController.css.map */

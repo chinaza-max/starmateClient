@@ -1,0 +1,34 @@
+@mixin ul($display,$column,$gap){
+    list-style: none;
+    padding: 0px;
+    display: $display;
+    grid-template-columns:repeat($column,1fr);;
+    grid-column-gap:$gap;
+}
+
+
+.Table{
+    @include ul(grid,7,20px);
+    padding-bottom: 5px;
+    margin-top: 5px;
+    li{
+       font-size: 12px;
+       min-width:45px;
+       white-space: nowrap;
+       line-height: 40px;
+       @media (max-width:1000px) {
+        font-size: 8px;
+        }
+        &:nth-child(4){
+            white-space: nowrap;
+        }
+        width: fit-content;
+        &:nth-child(1){
+            max-width:90px;
+        }
+    }
+    .button{
+        margin-top: 1px;
+     
+    }
+}

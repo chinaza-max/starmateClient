@@ -1,0 +1,27 @@
+.MediaController{
+    border: 1px solid red;
+    .container{
+        list-style: none;
+        display: flex;
+        >li{
+            flex: 1;
+            border: 1px solid blue;
+        }
+        .countCountDown{
+            ul{
+                list-style: none;
+                display: flex;
+                width: fit-content;
+                border: 1px solid pink;
+                li{
+                    width:25px;
+                    text-align: center;
+                    span{
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

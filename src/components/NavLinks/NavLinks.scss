@@ -1,0 +1,103 @@
+$text:#FFFFFF;
+$hovercolor:rgba(255, 215, 0, 1);
+$sizeNavText:15px;
+$sizeNavTextPhoneTablet:13px;
+$sizeNavTextPhone:12px;
+
+
+
+
+@mixin flexrow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    list-style: none;
+}
+
+
+.NavLinks{
+    @include flexrow;
+    //width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    max-width:800px;
+    @media (max-width:1024px) {
+        max-width:665px;
+    }
+    @media (max-width:861px) {
+        width: 85%;
+    }
+    @media (max-width:768px) {
+        width: 84%;
+    }
+    @media (max-width:570px) {
+        max-width:430px;
+    }
+    @media (max-width:520px) {
+        width: 95%;
+    }
+    @media (max-width:315px) {
+        width: 99%;
+    }
+    @media (max-width:480px) {
+        display: none;
+
+        //display: 3px solid rgb(0, 4, 128);
+    }
+    margin: 0 auto;
+    height: 27px;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    li{ 
+        p{
+            display: inline-block;
+            color:$text;
+            border-width: 0px;
+            white-space: nowrap;
+            font-size:$sizeNavText;
+            position: relative;
+            span{
+                position: absolute;
+                right: -10px;
+                top: -4px;
+                color: red;
+            }
+        }
+        p:hover{
+            color:$hovercolor ;
+        }
+        .active p{
+            padding-bottom: 2px;
+            color:$hovercolor ;
+            border-bottom: 2px solid $hovercolor;
+            @media (max-width:480px) {
+                padding-bottom: 6px;
+            }
+        }
+        @media (max-width:780px) {
+            p{
+                font-size:$sizeNavTextPhoneTablet;
+            }
+        }
+        @media (max-width:480px) {
+            p{
+                font-size:$sizeNavTextPhone;
+            }
+            &:nth-child(1){
+                display: none;
+            }
+            &:nth-child(7){
+                display: none;
+            }
+        }
+    } 
+   
+}
+
+/*
+
+break points
+     @media (max-width:480px) {}
+
+*/

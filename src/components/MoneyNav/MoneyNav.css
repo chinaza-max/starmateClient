@@ -1,0 +1,87 @@
+.MoneyNav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 480px) {
+  .MoneyNav li {
+    line-height: 50px;
+  }
+}
+.MoneyNav > li:first-child {
+  padding-right: 5px;
+  line-height: 24px;
+}
+@media (max-width: 480px) {
+  .MoneyNav > li:first-child {
+    line-height: 27px;
+  }
+}
+.MoneyNav > li:first-child:hover {
+  cursor: pointer;
+}
+.MoneyNav > li:last-child:hover {
+  cursor: pointer;
+}
+.MoneyNav > li:last-child {
+  line-height: 27px;
+  padding-left: 6px;
+}
+@media (max-width: 480px) {
+  .MoneyNav > li:last-child {
+    line-height: 28px;
+  }
+}
+.MoneyNav > li:last-child .refresh {
+  display: inline-block;
+  animation: load1 400ms ease-in;
+}
+@keyframes load1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(100deg);
+  }
+}
+.MoneyNav > li:nth-child(2) ul li:nth-child(1) {
+  font-size: 13px;
+  line-height: 22px;
+}
+@media (max-width: 480px) {
+  .MoneyNav > li:nth-child(2) ul li {
+    line-height: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .MoneyNav > li:nth-child(2) > ul > li:first-child {
+    font-size: 10px;
+    line-height: 27px;
+  }
+}
+.MoneyNav .MoneyNavInput {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  color: #FFFFFF;
+  padding-left: 3px;
+}
+@media (max-width: 480px) {
+  .MoneyNav .MoneyNavInput {
+    margin-right: -4px;
+  }
+}
+.MoneyNav .MoneyNavInput:focus {
+  outline: none;
+}
+@media (max-width: 480px) {
+  .MoneyNav .MoneyNavInput {
+    font-size: 10px;
+    padding-left: 3px;
+  }
+}/*# sourceMappingURL=MoneyNav.css.map */

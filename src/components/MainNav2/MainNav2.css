@@ -1,0 +1,64 @@
+.NavLinkmobile {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 520px;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  .NavLinkmobile {
+    max-width: 480px;
+    width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  .NavLinkmobile {
+    width: 95%;
+    min-width: 290px;
+  }
+}
+.NavLinkmobile > li {
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 25px;
+}
+.NavLinkmobile > li > a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: white;
+  font-size: 17px;
+  white-space: nowrap;
+}
+@media (max-width: 780px) {
+  .NavLinkmobile > li > a {
+    font-size: 15px;
+  }
+}
+.NavLinkmobile > li > a > span {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 2px;
+  border-radius: 30px 30px 0px 0px;
+  width: 0%;
+  background-color: rgb(255, 215, 0);
+  transition: width 300ms;
+}
+.NavLinkmobile > li > a:hover .borderSelect {
+  width: 100%;
+}
+.NavLinkmobile > li > a:hover {
+  color: rgb(255, 215, 0);
+}
+.NavLinkmobile > li .active2 {
+  color: rgb(255, 215, 0);
+}
+.NavLinkmobile > li .active2 > span {
+  width: 100%;
+}/*# sourceMappingURL=MainNav2.css.map */

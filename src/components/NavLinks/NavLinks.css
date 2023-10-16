@@ -1,0 +1,99 @@
+.NavLinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+  list-style: none;
+  padding-right: 5px;
+  padding-left: 5px;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 27px;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+@media (max-width: 1024px) {
+  .NavLinks {
+    max-width: 665px;
+  }
+}
+@media (max-width: 861px) {
+  .NavLinks {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  .NavLinks {
+    width: 84%;
+  }
+}
+@media (max-width: 570px) {
+  .NavLinks {
+    max-width: 430px;
+  }
+}
+@media (max-width: 520px) {
+  .NavLinks {
+    width: 95%;
+  }
+}
+@media (max-width: 315px) {
+  .NavLinks {
+    width: 99%;
+  }
+}
+@media (max-width: 480px) {
+  .NavLinks {
+    display: none;
+  }
+}
+.NavLinks li p {
+  display: inline-block;
+  color: #FFFFFF;
+  border-width: 0px;
+  white-space: nowrap;
+  font-size: 15px;
+  position: relative;
+}
+.NavLinks li p span {
+  position: absolute;
+  right: -10px;
+  top: -4px;
+  color: red;
+}
+.NavLinks li p:hover {
+  color: rgb(255, 215, 0);
+}
+.NavLinks li .active p {
+  padding-bottom: 2px;
+  color: rgb(255, 215, 0);
+  border-bottom: 2px solid rgb(255, 215, 0);
+}
+@media (max-width: 480px) {
+  .NavLinks li .active p {
+    padding-bottom: 6px;
+  }
+}
+@media (max-width: 780px) {
+  .NavLinks li p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+  .NavLinks li p {
+    font-size: 12px;
+  }
+  .NavLinks li:nth-child(1) {
+    display: none;
+  }
+  .NavLinks li:nth-child(7) {
+    display: none;
+  }
+}
+
+/*
+
+break points
+     @media (max-width:480px) {}
+
+*//*# sourceMappingURL=NavLinks.css.map */

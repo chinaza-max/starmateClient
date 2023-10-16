@@ -1,0 +1,140 @@
+.MainNav {
+  height: 93px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 3000;
+}
+@media (max-width: 480px) {
+  .MainNav {
+    height: 88px;
+  }
+}
+.MainNav #upNav {
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+@media (max-width: 1024px) {
+  .MainNav #upNav {
+    max-width: 97%;
+  }
+}
+.MainNav #upNav > li {
+  margin-top: 4px;
+  height: 55px;
+}
+@media (max-width: 480px) {
+  .MainNav #upNav > li {
+    margin-top: 0px;
+  }
+}
+.MainNav #upNav > li:first-child span {
+  width: 110px;
+  height: 80px;
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .MainNav #upNav > li:first-child span {
+    width: 60px;
+    height: 50px;
+    line-height: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .MainNav #upNav > li:first-child span {
+    border-radius: 50%;
+    width: 60px;
+    height: 30px;
+    line-height: 80px;
+  }
+}
+.MainNav #upNav > li:first-child span a {
+  display: block;
+  width: 285px;
+  height: 80px;
+}
+@media (max-width: 480px) {
+  .MainNav #upNav > li:first-child span a {
+    display: inline-block;
+    width: 130px;
+    height: 55px;
+  }
+}
+.MainNav #upNav > li:first-child span a img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 480px) {
+  .MainNav #upNav > li:first-child span a img {
+    border-radius: 10%;
+  }
+}
+.MainNav #upNav > li:last-child {
+  text-align: right;
+}
+.MainNav #upNav > li:last-child > span {
+  margin-top: 20px;
+  display: inline-block;
+}
+@media (max-width: 480px) {
+  .MainNav #upNav > li:last-child > span {
+    margin-top: 16px;
+  }
+}
+.MainNav #upNav > li:last-child #second {
+  margin-left: 10px;
+}
+@media (max-width: 480px) {
+  .MainNav #upNav > li:last-child #second {
+    margin-right: 3px;
+  }
+}
+.MainNav #upNav > li:last-child #rightSide {
+  width: 190px;
+  float: right;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-column-gap: 8px;
+  margin-top: 25px;
+}
+@media (max-width: 480px) {
+  .MainNav #upNav > li:last-child #rightSide {
+    margin-top: 15px;
+  }
+}
+.MainNav #upNav > li:last-child #rightSide > li:nth-child(2) {
+  font-size: 12px;
+  white-space: nowrap;
+  margin-top: 5px;
+}
+.MainNav #upNav > li:last-child #rightSide > li:nth-child(2) > span {
+  border: 3px solid white;
+  padding: 3px;
+  line-height: 10px;
+}
+@media (max-width: 480px) {
+  .MainNav #upNav > li:last-child #rightSide > li:nth-child(2) > span {
+    border: 2px solid white;
+  }
+}
+.MainNav #upNav > li:last-child #rightSide > li:nth-child(2) > span:hover {
+  cursor: pointer;
+  border: 3px solid rgb(255, 215, 0);
+  color: rgb(255, 215, 0);
+}
+.MainNav #upNav > li:last-child #rightSide > li:nth-child(3) .AccountCircleIcon:hover {
+  cursor: pointer;
+  color: rgb(255, 215, 0);
+}
+@media (max-width: 480px) {
+  .MainNav #upNav {
+    grid-template-columns: 1fr 1fr;
+  }
+}/*# sourceMappingURL=MainNav.css.map */

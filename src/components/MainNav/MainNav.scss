@@ -1,0 +1,128 @@
+$hoverColor:rgba(255, 215, 0, 1);
+$fontsizeDesktop:17px;
+$fontsizetablet:15px;
+
+.MainNav{
+    height: 93px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index:3000;
+    @media (max-width:480px) {
+        height: 88px;
+    }
+    #upNav{
+        max-width:1200px;
+        margin: 0 auto;
+        list-style: none;
+        padding:0;
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-column-gap: 10px;
+        @media (max-width:1024px) {
+            max-width: 97%;
+        }
+        >li{
+            margin-top: 4px;
+            height: 55px;
+            @media (max-width:480px) {
+                margin-top: 0px;
+            }
+        }
+        >li:first-child{
+            span{
+                width: 110px;
+                height: 80px;
+                display: inline-block;
+                @media (max-width:768px) {
+                    width: 60px;
+                    height: 50px;
+                    line-height: 120px;
+                }
+                @media (max-width:480px) {
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 30px;
+                    line-height: 80px;
+                }
+                a{
+                    display: block;
+                    width: 285px;
+                    height: 80px;
+                    @media (max-width:480px) {
+                        display: inline-block;
+                        width: 130px;
+                        height: 55px;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        @media (max-width:480px) {
+                            border-radius: 10%;
+                        }
+                     }
+                }
+            }
+        }
+        >li:last-child{
+            text-align: right;
+            >span{
+                margin-top: 20px;
+                display: inline-block;
+                @media (max-width:480px) {
+                    margin-top: 16px;
+                }
+            }
+            #second{
+                margin-left: 10px;
+                @media (max-width:480px) {
+                    margin-right: 3px;
+                }
+            }
+            #rightSide{
+                width: 190px;
+                float: right;
+                list-style: none;
+                padding: 0;
+                display: grid;
+                grid-template-columns:2fr 2fr 1fr;
+                grid-column-gap: 8px;
+                margin-top: 25px;
+                @media (max-width:480px) {
+                    margin-top: 15px;
+
+                }   
+                >li:nth-child(2){
+                    font-size: 12px;
+                    white-space: nowrap;
+                    margin-top: 5px;
+                    >span{
+                        border: 3px solid white;
+                        padding: 3px;
+                        line-height: 10px;
+                        @media (max-width:480px) {
+                            border: 2px solid white;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            border: 3px solid $hoverColor;
+                            color: $hoverColor;
+                        }
+                    }
+                }
+                >li:nth-child(3){
+                    .AccountCircleIcon{
+                        &:hover{
+                            cursor: pointer;
+                            color: $hoverColor;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width:480px) {
+            grid-template-columns:1fr 1fr;
+        }
+    
+    }
+}

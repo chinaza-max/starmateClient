@@ -1,0 +1,37 @@
+$colorP:#6E6d7a;
+
+
+
+.Headers{
+    h2{
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 20px;
+        width: 100%;
+        overflow-x: hidden;
+        .show{
+            color: green;
+        }
+        @media (max-width:768px) {
+            font-size: 22px;
+        }
+        @media (max-width:480px) {
+            font-size: 20px;
+        }
+    }
+    p{
+        text-align: center;
+        color:$colorP;
+        font-size: 18px;
+        max-width:1200px;
+        margin: 0 auto;
+        @media (max-width:768px) {
+            font-size: 15px;
+        }
+        @media (max-width:480px) {
+            max-width: 95%;
+            font-size: 15px;
+        }
+    }
+
+}
