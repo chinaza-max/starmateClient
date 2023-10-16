@@ -1,0 +1,87 @@
+$backgroundColor:#214c3b;
+
+
+
+.Container1{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    #Container1Section2{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 120px;
+        @media (max-width:1004px) {
+            max-width: 860px;
+        }
+        @media (max-width:860px) {
+            max-width: 750px;
+        }  
+        @media (max-width:761px) {
+            max-width: 600px;
+        }
+        @media (max-width:759px) {
+          //  width: 98%;
+          //755 759
+        }
+        @media (max-width:480px) {
+            margin-top: 48px;
+        }
+        .navBar{
+            background:$backgroundColor;
+            height: 30px;
+            padding-top: 10px;
+            max-width: 960px;
+            margin: 0 auto;
+            .avatar{
+                width: 40px;
+                height: 40px;
+                float: right;
+                margin-top: -10px;
+                padding-right: 5px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+            @media (max-width:570px) {
+                max-width:550px; 
+            }
+            @media (max-width:502px) {
+                display: none;
+            }
+        }
+    }
+    #Container1Section3{
+        display: none;
+        @media (max-width:768px) {
+            display: block;
+        }
+
+    }
+    #Container1Section4{
+        position: relative;
+        @media (max-width:480px) {
+            margin-bottom: 30px;
+        }
+        &::before{
+            content: "starmatify your home";
+            width: 250px;
+            height: 53px;
+            position: absolute;
+            top: -45px;
+            left: -45px;
+            background-color: $backgroundColor;
+            transform: rotate(20deg);
+            text-align: center;
+            line-height: 45px;
+            color: gold;
+            @media (max-width:480px) {
+                height: 40px;
+                top: -35px;
+                left: -40px;
+                line-height: 40px;
+            }
+        }
+    }
+}

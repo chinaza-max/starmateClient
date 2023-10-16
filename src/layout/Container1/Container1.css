@@ -1,0 +1,97 @@
+.Container1 {
+  position: relative;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.Container1 #Container1Section2 {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+@media (max-width: 1004px) {
+  .Container1 #Container1Section2 {
+    max-width: 860px;
+  }
+}
+@media (max-width: 860px) {
+  .Container1 #Container1Section2 {
+    max-width: 750px;
+  }
+}
+@media (max-width: 761px) {
+  .Container1 #Container1Section2 {
+    max-width: 600px;
+  }
+}
+@media (max-width: 480px) {
+  .Container1 #Container1Section2 {
+    margin-top: 48px;
+  }
+}
+.Container1 #Container1Section2 .navBar {
+  background: #214c3b;
+  height: 30px;
+  padding-top: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.Container1 #Container1Section2 .navBar .avatar {
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-top: -10px;
+  padding-right: 5px;
+}
+.Container1 #Container1Section2 .navBar .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+@media (max-width: 570px) {
+  .Container1 #Container1Section2 .navBar {
+    max-width: 550px;
+  }
+}
+@media (max-width: 502px) {
+  .Container1 #Container1Section2 .navBar {
+    display: none;
+  }
+}
+.Container1 #Container1Section3 {
+  display: none;
+}
+@media (max-width: 768px) {
+  .Container1 #Container1Section3 {
+    display: block;
+  }
+}
+.Container1 #Container1Section4 {
+  position: relative;
+}
+@media (max-width: 480px) {
+  .Container1 #Container1Section4 {
+    margin-bottom: 30px;
+  }
+}
+.Container1 #Container1Section4::before {
+  content: "starmatify your home";
+  width: 250px;
+  height: 53px;
+  position: absolute;
+  top: -45px;
+  left: -45px;
+  background-color: #214c3b;
+  transform: rotate(20deg);
+  text-align: center;
+  line-height: 45px;
+  color: gold;
+}
+@media (max-width: 480px) {
+  .Container1 #Container1Section4::before {
+    height: 40px;
+    top: -35px;
+    left: -40px;
+    line-height: 40px;
+  }
+}/*# sourceMappingURL=Container1.css.map */

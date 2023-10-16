@@ -1,0 +1,33 @@
+$backgroundColor:#214c3b;
+
+.Container3{
+    margin-top:85px;
+    .Container3Section2{
+        min-height: 50vh ;
+    }
+    .Container3Section4{
+        margin-bottom: 0px;
+        &::before{
+            content: "starmatify your home";
+            width: 250px;
+            height: 53px;
+            position: absolute;
+            top: -45px;
+            left: -45px;
+            background-color: $backgroundColor;
+            transform: rotate(20deg);
+            text-align: center;
+            line-height: 45px;
+            color: gold;
+            @media (max-width:480px) {
+                height: 40px;
+                top: -35px;
+                left: -40px;
+                line-height: 40px;
+            }
+        }
+        @media (max-width:480px) {
+            margin-bottom: 30px;
+        }
+    }
+}

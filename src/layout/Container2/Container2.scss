@@ -1,0 +1,92 @@
+$backgroundColor:#214c3b;
+
+.Container2{
+    margin-top:85px;
+    .Container2Section2{
+        min-height: 50vh ;
+        width: 100%;
+        .imgContainer{
+            width: 100%;
+            
+            min-height: 530px;
+            background-image: url("../../images/imageInUse/galleryImage/image23.jpg");
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+        .info{
+            text-align: center;
+            position: relative;
+            border-bottom-right-radius: 30%;
+            border-top-left-radius: 30%;
+            width: 90%;
+            height: 100px;
+            margin: 0 auto;
+            margin-top: 20px;
+            background: linear-gradient(269.75deg, #746200 0%, rgba(107, 117, 110, 0) 106.02%);
+            padding-top: 10px;
+            font-size: 34px;
+            color: white;
+            @media (max-width:550px) {
+                font-size: 25px;
+            }
+            .show{
+                color: green;
+            }
+            &::before{
+                content: '';
+                width: 250px;
+                height: 100%;
+                position: absolute;
+                left: 0px;
+                border-top-left-radius: 30%;
+            }
+            &::after{
+                content: '';
+                width: 98%;
+                height: 50%;
+                position: absolute;
+                right: 0px;
+                bottom: 0;
+                border-bottom-right-radius: 30%;
+                border-top-left-radius: 100%;
+               box-shadow: -6px 6px 12px -6px rgba(0,0,0,0.75);
+-webkit-box-shadow: -6px 6px 12px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: -6px 6px 12px -6px rgba(0,0,0,0.75);
+              
+            }
+            @media (max-width:550px) {
+                width: 99%;
+            }
+        }
+    }
+    .Container2Section3{
+        z-index: 10;
+    }
+    .Container2Section4{
+        margin-bottom: 0px;
+        &::before{
+            content: "starmatify your home";
+            width: 250px;
+            height: 53px;
+            position: absolute;
+            top: -45px;
+            left: -45px;
+            background-color: $backgroundColor;
+            transform: rotate(20deg);
+            text-align: center;
+            line-height: 45px;
+            color: gold;
+            @media (max-width:480px) {
+                height: 40px;
+                top: -35px;
+                left: -40px;
+                line-height: 40px;
+            }
+        }
+        @media (max-width:480px) {
+            margin-bottom: 30px;
+        }
+       
+    }
+}   

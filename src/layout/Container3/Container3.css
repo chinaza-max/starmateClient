@@ -1,0 +1,35 @@
+.Container3 {
+  margin-top: 85px;
+}
+.Container3 .Container3Section2 {
+  min-height: 50vh;
+}
+.Container3 .Container3Section4 {
+  margin-bottom: 0px;
+}
+.Container3 .Container3Section4::before {
+  content: "starmatify your home";
+  width: 250px;
+  height: 53px;
+  position: absolute;
+  top: -45px;
+  left: -45px;
+  background-color: #214c3b;
+  transform: rotate(20deg);
+  text-align: center;
+  line-height: 45px;
+  color: gold;
+}
+@media (max-width: 480px) {
+  .Container3 .Container3Section4::before {
+    height: 40px;
+    top: -35px;
+    left: -40px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .Container3 .Container3Section4 {
+    margin-bottom: 30px;
+  }
+}/*# sourceMappingURL=Container3.css.map */
