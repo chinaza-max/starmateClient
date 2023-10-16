@@ -1,0 +1,191 @@
+.Dashboard {
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+@media (max-width: 1008px) {
+  .Dashboard {
+    width: 100%;
+  }
+}
+@media (max-width: 780px) {
+  .Dashboard {
+    width: 97%;
+  }
+}
+@media (max-width: 480px) {
+  .Dashboard {
+    margin-top: 111px;
+  }
+}
+.Dashboard > ul {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  flex-direction: column;
+}
+.Dashboard > ul > li {
+  margin-top: 20px;
+}
+.Dashboard > ul .transaction {
+  grid-area: three;
+}
+@media (max-width: 1008px) {
+  .Dashboard > ul {
+    list-style: none;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 4px;
+    grid-template-areas: "one" "two" "three";
+  }
+  .Dashboard > ul .cards {
+    grid-area: one;
+  }
+  .Dashboard > ul .pending {
+    grid-area: two;
+  }
+  .Dashboard > ul .transaction {
+    grid-area: three;
+  }
+}
+.Dashboard > ul .cards .cardsContent {
+  list-style: none;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 30px;
+}
+.Dashboard > ul .cards .cardsContent > li > div {
+  width: 285px;
+  height: 100px;
+  background-color: rgb(232, 230, 230);
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: rgba(168, 144, 8, 0.9176470588);
+}
+.Dashboard > ul .cards .cardsContent > li > div > h3 {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.Dashboard > ul .cards .cardsContent > li > div > h5 {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.Dashboard > ul .cards .cardsContent > li > div > div {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+@media (max-width: 1008px) {
+  .Dashboard > ul .cards .cardsContent {
+    list-style: none;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2px;
+    justify-items: center;
+  }
+  .Dashboard > ul .cards .cardsContent > li > div {
+    width: 220px;
+    height: 95px;
+  }
+  .Dashboard > ul .cards .cardsContent > li > div > h5 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 762px) {
+  .Dashboard > ul .cards .cardsContent {
+    list-style: none;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 2px;
+  }
+  .Dashboard > ul .cards .cardsContent > li > div {
+    width: 300px;
+    height: 100px;
+  }
+  .Dashboard > ul .cards .cardsContent > li > div > h5 {
+    font-size: 13px;
+  }
+}
+.Dashboard > ul .pending {
+  display: block;
+  padding: 0;
+  border-bottom: 1px solid #b8b6b6;
+  padding-bottom: 40px;
+}
+.Dashboard > ul .pending .pendingContainer {
+  width: 100%;
+}
+.Dashboard > ul .pending .pendingContainer .tableHead {
+  margin-bottom: 10px;
+}
+@media (max-width: 1008px) {
+  .Dashboard > ul .pending .pendingContainer {
+    width: 680px;
+    margin: 0 auto;
+  }
+}
+.Dashboard > ul .pending .projectMobile {
+  display: none;
+}
+.Dashboard > ul .pending .projectMobile .cardHead {
+  color: green;
+  font-size: 25px;
+}
+@media (max-width: 762px) {
+  .Dashboard > ul .pending .projectMobile {
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 762px) {
+  .Dashboard > ul .pending .project {
+    display: none;
+  }
+}
+.Dashboard > ul .pending .emptyProject {
+  margin: 50px auto;
+}
+.Dashboard > ul .transaction {
+  display: block;
+}
+.Dashboard > ul .transaction .containerTransaction {
+  width: 100%;
+}
+.Dashboard > ul .transaction .containerTransaction .tableHead {
+  margin-bottom: 10px;
+}
+.Dashboard > ul .transaction .projectMobile {
+  display: none;
+}
+.Dashboard > ul .transaction .projectMobile .cardHead {
+  color: green;
+  font-size: 25px;
+}
+@media (max-width: 762px) {
+  .Dashboard > ul .transaction .projectMobile {
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 762px) {
+  .Dashboard > ul .transaction .Transaction {
+    display: none;
+  }
+}
+.Dashboard > ul .transaction .emptyTransaction {
+  margin: 50px auto;
+}/*# sourceMappingURL=Dashboard.css.map */

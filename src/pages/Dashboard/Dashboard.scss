@@ -1,0 +1,184 @@
+$backgroundColor:#a89008ea;
+
+
+
+
+@mixin ul($display,$column,$gap ){
+    list-style: none;
+    padding: 0px;
+    display: $display;
+    grid-template-columns:repeat($column,1fr);;
+    grid-column-gap:$gap;
+}
+
+
+.Dashboard{
+    width: 950px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    @media (max-width:1008px) {
+        width: 100%;
+    }
+    @media (max-width:780px) {
+        width: 97%;
+    }    
+    @media (max-width:480px) {
+        margin-top: 111px;
+    }   
+    >ul {   
+        display: flex;
+        list-style: none;
+        padding: 0px;
+        flex-direction: column;
+        >li{
+            margin-top: 20px;
+        }
+        .transaction {
+            grid-area: three;
+        }
+       
+        @media (max-width:1008px) {
+            @include ul(grid,1,4px);
+            grid-template-areas:
+            "one""two""three";
+            .cards {
+                grid-area: one;
+            }
+            .pending {
+                grid-area: two;
+            }
+            .transaction {
+                grid-area: three;
+            }
+        }
+        .cards{  
+            .cardsContent{
+                @include ul(grid,3,2px);
+                grid-row-gap:30px;
+                >li{
+                    >div{
+                        width: 285px;
+                        height: 100px;
+                        background-color: rgb(232, 230, 230);
+                        border-bottom-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        background-color: $backgroundColor;
+                        >h3{
+                            text-align: center;
+                            color: white;
+                            padding-top: 10px;
+                            margin-bottom: 10px;
+                            font-size: 15px;
+                        }
+                        >h5{
+                            text-align: center;
+                            color: white;
+                            padding-top: 10px;
+                            margin-bottom: 10px;
+                        }
+                        >div{
+                            width: fit-content;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                @media (max-width:1008px) {
+                    @include ul(grid,3,2px);
+                    justify-items: center;
+                    >li{
+                        >div{
+                            width: 220px;
+                            height: 95px;
+                            >h5{
+                                font-size: 12px;
+
+                            }
+                        }
+                    }
+                }
+                @media (max-width:762px) {
+                    @include ul(grid,1,2px);
+                    >li{
+                        >div{
+                            width: 300px;
+                            height: 100px;
+                            >h5{
+                                font-size: 13px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pending{
+            display: block;
+            padding: 0;
+            border-bottom:1px solid #b8b6b6;
+            padding-bottom: 40px;
+            .pendingContainer{
+                width: 100%;
+               
+                .tableHead{
+                    margin-bottom: 10px;
+              
+                }
+                @media (max-width:1008px) {
+                    width: 680px;
+                    margin: 0 auto;
+                }
+            }
+            .projectMobile{
+                display: none;
+                .cardHead{
+                    color: green;
+                    font-size: 25px;
+                }
+                @media (max-width:762px) {
+                    display: block;
+                    width: 98%;
+                    margin: 0 auto;
+                }
+            }
+            .project{
+                @media (max-width:762px) {
+                    display: none;
+                }
+            }
+            .emptyProject{
+                margin: 50px auto;
+            }
+        }
+        .transaction{
+            display: block;
+            .containerTransaction{
+                width: 100%;
+                .tableHead{
+                    margin-bottom: 10px;
+                }
+            }
+            .projectMobile{
+                display: none;
+                .cardHead{
+                    color: green;
+                    font-size: 25px;
+                }
+                @media (max-width:762px) {
+                    display: block;
+                    width: 98%;
+                    margin: 0 auto;
+                }
+            }
+            .Transaction{
+                @media (max-width:762px) {
+                    display: none;
+                }
+            }
+            .emptyTransaction{
+                margin: 50px auto;
+            }
+        }
+    }
+}
