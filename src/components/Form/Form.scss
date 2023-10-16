@@ -1,0 +1,278 @@
+$fontFamilyT:'Sansita Swashed', cursive;
+$buttonColor:#285945;
+
+.FormContainer{
+    width: 100%;
+    height: fit-content;
+    z-index: 1;
+    position: relative;
+    form{
+        width: 380px;
+        height:fit-content;
+        margin: 0 auto;
+        margin-top: 30px;  
+        background-color: #2c2b2bc9;
+        padding-bottom: 1px;
+        @media (max-width:768px) {
+            width: 300px;
+        }
+        #title{
+            width: 100%;
+            height: 35px;
+            text-align: center;
+            color: white;
+            line-height: 35px;
+            font-size: 18px;
+            font-family: $fontFamilyT;
+           // background: linear-gradient(270deg, #295E48 -2.92%, rgba(40, 89, 69, 0) 122.79%);
+            filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
+        } 
+        #content{
+            margin: 0 auto;
+            width: 96%;
+            position: relative;
+            padding-bottom: 25px;
+            overflow: hidden;
+            .label{
+                margin-top: 10px;
+                color: white;
+            }
+            .select{
+                width: 100%;
+                display:block;
+                color:white;
+                opacity: 0.7;
+                border: none;
+                border-bottom: 1px solid rgb(214, 213, 213);
+                outline:0px;
+                font-size: 13px;
+                padding: 0;
+                margin: 0;
+                background-color: #3b393938;
+                padding-bottom: 4px;
+                option:hover{
+                    background-color:yellow;
+                }
+                :focus{
+                    outline: none;
+                }
+            }
+            #selectSection1{
+                grid-template-columns:1fr 1fr 1fr;
+                margin-top: 15px;
+                li{
+                    display: block;
+                    &:nth-child(2){
+                        div{
+                            margin: 0 auto;
+                        }
+                    }
+                    &:nth-child(3){
+                        div{
+                            float: right;
+                        }
+                    }
+                }
+            }
+            #selectSection2{
+                grid-template-columns:1fr 1fr;
+                margin-top: 5px;
+                li{
+                    &:nth-child(2){
+                        div{
+                            float: right;
+                        }
+                    }
+                }
+            }
+            #selectSection3{
+                grid-template-columns:1fr 1fr;
+                margin-top: 5px;
+                li{
+                    width: 100%;
+                }
+            }
+            #selectSection4{
+                grid-template-columns:1fr 1fr;
+                margin-top: 0px;
+                li{
+                    width: 100%;
+                }
+            }
+            #selectSection5{
+                grid-template-columns:1fr 1fr;
+                margin-top: 10px;
+                li{
+                    width: 100%;
+                    position: relative;
+                    .icons{
+                        position: absolute;
+                        top: 29px;
+                        right: 3px;
+                        font-size: 15px;
+                    }
+                    .schedule{
+                        width: 100%;
+                    }
+                    .label{
+                        font-size: 12px;
+                    }
+                }
+            }
+            #selectSection6{
+                grid-template-columns:1fr 1fr;
+                margin-top: 0px;
+                li{
+                    width: 100%;
+                    position: relative;
+                    .icons{
+                        position: absolute;
+                        top: 29px;
+                        right: 3px;
+                        font-size: 15px;
+                        
+                    }
+                    .schedule{
+                        width: 100%;
+                    }
+                    .label{
+                        font-size: 12px;
+                    }
+                }
+            }
+            .selectSection{
+                width: 100%;
+                padding: 0px;
+                list-style: none;
+                display: grid;
+                grid-column-gap: 40px;
+                @media (max-width:768px) {
+                    grid-column-gap: 10px;
+                }
+                justify-items: center;
+                li{
+                    width: 100%;
+                    .active{
+                        background-color: rgba(40, 89, 69, 1);
+                        color: white;
+                    }
+                    .schedule{
+                       background-color: white;
+                       outline:0px;
+                       border: none;
+                       position: relative;
+                       
+                       &:focus{
+                        outline: none;
+                       }
+                       &:hover{
+                        cursor: pointer;
+                       }
+                    }
+                }
+            }
+            textarea{
+                width: 99%;
+                outline: none;
+                background-color: transparent;
+                color: rgb(222, 220, 220);
+                border: 2px solid rgb(163, 161, 156);
+                border-radius:5px;
+                height: 40px;
+                &:focus{
+                    outline: none;
+                }
+            }
+            #additionalService{
+               width: 100%;
+               height: fit-content;
+               list-style: none;
+               padding: 0;
+               display: grid;
+               grid-row-gap: 15px;
+               grid-template-columns:1fr;
+               margin-top: 15px;
+               .services{
+                background-color: #6fbb9b;
+                border-radius: 20px;
+                padding: 20px;
+                padding-bottom: 40px;
+                position: relative;
+                .select{
+                    border-bottom: 1px solid rgb(2, 92, 23);;
+                }
+                .DeleteIcon{
+                    position: absolute;
+                    bottom: 0;
+                    right: 10px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                textarea{
+                    width: 99.5%;
+                    border: 2px solid rgb(2, 92, 23);
+                    border-radius:5px;
+                    height: 40px;
+                }
+               }
+            }
+            .AddIcons{
+                position: absolute;
+                bottom: -2px;
+                right: 0px;
+                //color: green;
+                &:hover{
+                    cursor: pointer;
+                }
+                .action{
+                    font-size:10px;
+                    //color: green;
+                }
+            }
+          
+        }
+        #userDetails{
+            margin: 0 auto;
+            width: 96%;
+            .label{
+                color: white;
+            }
+            >input[type=text]{
+                width: 96%;
+                margin-top: 3px;
+                border-radius: 12px;
+                padding: 3px;
+                background-color: transparent;
+                color: white;
+                &:focus{
+                    outline: none;
+                    border: 1px solid green;
+                    background-color: #E8F0FE;
+                    color: black;
+                    
+                } 
+            }
+        }
+        button{
+            margin: 0 auto;
+            width: 60%;
+            height: 30px;
+            display: block;
+            color: white;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            border: none;
+            &:focus{
+                outline: none;
+                border: none;
+            }
+            &:hover{
+                background-color: white;
+                color: $buttonColor;
+                border: 2px solid $buttonColor;
+                cursor: pointer;
+            }
+        }
+    }
+}
