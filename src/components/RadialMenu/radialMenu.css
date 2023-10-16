@@ -1,0 +1,95 @@
+.radialMenu {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.radialMenu #container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.radialMenu #mainbtn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+}
+.radialMenu .circle-container {
+  position: absolute;
+  top: -50px;
+  left: -47px;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
+.radialMenu .circle-container span {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #1976d2;
+  width: 36px;
+  height: 36px;
+  margin: 50px;
+}
+.radialMenu .circle-container i {
+  display: block;
+  width: 100px;
+}
+.radialMenu .deg0 {
+  transform: rotate(-200deg) translate(5.75em) rotate(0deg);
+  transition: all 0.5s ease-out;
+}
+.radialMenu .deg30 {
+  transform: rotate(-200deg) translate(5.75em) rotate(-30deg);
+  transition: all 0.5s ease-out;
+}
+.radialMenu .deg60 {
+  transform: rotate(-200deg) translate(5.75em) rotate(-60deg);
+  transition: all 0.5s ease-out;
+}
+.radialMenu .deg90 {
+  transform: rotate(-200deg) translate(6em) rotate(-90deg);
+  transition: all 0.5s ease-out;
+}
+.radialMenu span.hidden {
+  opacity: 0;
+}
+.radialMenu .fa-home:hover {
+  color: tan;
+}
+.radialMenu .fa-cog:hover {
+  color: gray;
+}
+.radialMenu .fa-comments:hover {
+  color: teal;
+}
+.radialMenu .fa-heart:hover {
+  color: red;
+}
+.radialMenu .open.deg0 {
+  transform: rotate(-90deg) translate(5.75em) rotate(0deg);
+}
+.radialMenu .open.deg30 {
+  transform: rotate(-60deg) translate(5.75em) rotate(61deg);
+}
+.radialMenu .open.deg60 {
+  transform: rotate(-30deg) translate(5.75em) rotate(32deg);
+}
+.radialMenu #author {
+  font-family: "Squada One";
+  top: calc(50% + 50px);
+  left: calc(50% - 225px);
+  color: black;
+  font-size: 40px;
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  text-align: center;
+}/*# sourceMappingURL=radialMenu.css.map */

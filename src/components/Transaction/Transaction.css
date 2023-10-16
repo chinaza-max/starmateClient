@@ -1,0 +1,36 @@
+.Transaction {
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 40vh;
+  width: 780px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+.Transaction .transactionMobile {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.Transaction .empty {
+  margin-top: 50px;
+}
+@media (max-width: 860px) {
+  .Transaction {
+    width: 680px;
+  }
+}
+@media (max-width: 757px) {
+  .Transaction {
+    width: 580px;
+  }
+}
+@media (max-width: 582px) {
+  .Transaction {
+    width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .Transaction {
+    width: 97%;
+  }
+}/*# sourceMappingURL=Transaction.css.map */

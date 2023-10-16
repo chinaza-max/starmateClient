@@ -1,0 +1,30 @@
+.Settings {
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 40vh;
+  width: 780px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+@media (max-width: 860px) {
+  .Settings {
+    width: 680px;
+  }
+}
+@media (max-width: 757px) {
+  .Settings {
+    width: 580px;
+  }
+}
+@media (max-width: 582px) {
+  .Settings {
+    width: 400px;
+    margin-top: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .Settings {
+    width: 97%;
+  }
+}/*# sourceMappingURL=Settings.css.map */
