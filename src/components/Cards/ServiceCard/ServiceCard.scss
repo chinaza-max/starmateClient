@@ -1,0 +1,40 @@
+$colorP:#6E6d7a;
+
+.ServiceCard{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns:1fr 5fr;
+    grid-column-gap: 2px;
+    padding: 10px;
+    @media (max-width:768px) {
+        padding: 10px;
+    }
+    @media (max-width:480px) {
+        padding: 5px;
+    }
+    >li{
+        height: fit-content;
+        &:nth-child(1){
+            .icons{
+                font-size: 60px;
+                    color: green;
+            }
+        }
+        &:nth-child(2) {
+           
+            p{
+                margin-top: 15px;
+                color: $colorP;
+              //  font-size: 16px;
+                line-height: 18px;
+                @media (max-width:768px) {
+                    // flex-wrap: nowrap;
+                }
+                @media (max-width:480px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

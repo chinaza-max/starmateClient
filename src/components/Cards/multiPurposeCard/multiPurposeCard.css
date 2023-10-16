@@ -1,0 +1,69 @@
+.multiPurposeCard {
+  background-color: rgba(29, 115, 8, 0.12);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+  height: 110px;
+  list-style: none;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5px;
+}
+.multiPurposeCard > li {
+  padding: 10px 10px 5px 10px;
+}
+.multiPurposeCard li {
+  white-space: nowrap;
+}
+.multiPurposeCard .first {
+  position: relative;
+}
+.multiPurposeCard .first h3 {
+  font-size: 15px;
+}
+.multiPurposeCard .first p {
+  margin-top: 4px;
+}
+.multiPurposeCard .first .date {
+  margin-top: 25px;
+  position: absolute;
+  bottom: 10px;
+}
+.multiPurposeCard .first .service {
+  color: black;
+}
+.multiPurposeCard .first .position {
+  margin-top: 15px;
+}
+.multiPurposeCard .second .button {
+  list-style: none;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2px;
+  margin-bottom: 20px;
+}
+.multiPurposeCard .second .button > li > div {
+  float: right;
+}
+.multiPurposeCard .second .payment {
+  list-style: none;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 4px;
+  margin-top: 3px;
+}
+.multiPurposeCard .second .payment li {
+  text-align: end;
+}
+.multiPurposeCard .second .pColor {
+  color: green;
+}
+.multiPurposeCard .second .p {
+  text-align: end;
+  margin-bottom: 15px;
+}
+.multiPurposeCard .second .changeColor {
+  color: rgba(202, 76, 76, 0.9803921569);
+}/*# sourceMappingURL=multiPurposeCard.css.map */

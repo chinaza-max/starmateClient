@@ -1,0 +1,38 @@
+.ServiceCards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+@media (max-width: 480px) {
+  .ServiceCards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.ServiceCards > li {
+  width: 450px;
+  max-width: none;
+  min-width: none;
+  margin-bottom: 30px;
+}
+@media (max-width: 955px) {
+  .ServiceCards > li {
+    width: 365px;
+  }
+}
+@media (max-width: 768px) {
+  .ServiceCards > li {
+    width: 342px;
+  }
+}
+@media (max-width: 480px) {
+  .ServiceCards > li {
+    max-width: 400px;
+    min-width: 280px;
+  }
+}/*# sourceMappingURL=ServiceCards.css.map */

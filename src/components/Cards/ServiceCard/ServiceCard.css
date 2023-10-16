@@ -1,0 +1,36 @@
+.ServiceCard {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-column-gap: 2px;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .ServiceCard {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .ServiceCard {
+    padding: 5px;
+  }
+}
+.ServiceCard > li {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.ServiceCard > li:nth-child(1) .icons {
+  font-size: 60px;
+  color: green;
+}
+.ServiceCard > li:nth-child(2) p {
+  margin-top: 15px;
+  color: #6E6d7a;
+  line-height: 18px;
+}
+@media (max-width: 480px) {
+  .ServiceCard > li:nth-child(2) p {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=ServiceCard.css.map */
