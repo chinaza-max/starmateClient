@@ -1,5 +1,5 @@
 .Gallery {
-  margin-top: 95px;
+  margin-top: 20px;
 }
 .Gallery .section1 {
   width: 90%;
@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin-top: 4px;
 }
 @media (max-width: 780px) {
   .Gallery .section1 {
@@ -38,7 +39,7 @@
   min-height: 50vh;
   width: 80%;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 18px;
 }
 @media (max-width: 480px) {
   .Gallery .section2 {

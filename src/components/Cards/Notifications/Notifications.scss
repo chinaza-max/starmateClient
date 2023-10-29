@@ -1,3 +1,50 @@
 .multiPurposeCards{
     margin-top: 20px;
 }
+.Notifications{
+    .dropDownContainer{
+        height: 40px;
+        display: flex;
+        justify-content: right;
+        .dropDown{
+            height: 30px;
+            button{
+                min-width: auto;
+                width: 200px;
+              
+            }
+            .MuiSelect-popper{
+                div{
+                    ul{
+                        min-width: auto;
+                        width: 100px;
+                        li{
+                                min-width: auto;
+                                width: 200px;
+                        }
+                    }
+                }
+            }
+            
+            @media (max-width:501px) {
+                button{
+                    width: 160px;
+                    min-width:180px
+                }
+            }
+        }
+    }
+}
+
+.MuiSelect-popper{
+    div{
+        ul{
+            min-width: auto;
+            width: 100px;
+            li{
+                    min-width: auto;
+                    width: 200px;
+            }
+        }
+    }
+}

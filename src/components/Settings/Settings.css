@@ -7,6 +7,9 @@
   margin-top: 30px;
   margin-bottom: 120px;
 }
+.Settings .OthersContainer {
+  margin-top: 40px;
+}
 @media (max-width: 860px) {
   .Settings {
     width: 680px;

@@ -18,6 +18,10 @@ export default function Profile(props) {
  
   return (
     <div className='Profile'> 
+
+
+
+    
         <figure className="snip1336 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample74.jpg" alt="sample74" />
             <figcaption>
                 <img src={img4} alt="avatar" className="profile" />

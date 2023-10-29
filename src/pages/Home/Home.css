@@ -34,6 +34,8 @@
   height: -moz-fit-content;
   height: fit-content;
   max-height: 670px;
+  position: relative;
+  overflow-x: hidden;
 }
 @media (max-width: 480px) {
   .Home .section-wrap #section1 {
@@ -357,7 +359,7 @@
 }
 .Home #section4 {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   margin-top: 30px;
 }
 .Home #section4 .services {
@@ -396,6 +398,7 @@
 }
 .Home #section6 {
   margin-top: 40px;
+  overflow: none;
 }
 .Home #section6 > h2 {
   text-align: center;
@@ -424,29 +427,30 @@
 .Home #section7 {
   position: relative;
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.Home #section7::before {
-  content: "starmatify your home";
-  width: 250px;
-  height: 53px;
-  position: absolute;
-  top: -45px;
-  left: -45px;
-  background-color: rgb(33, 76, 59);
-  transform: rotate(20deg);
-  text-align: center;
-  line-height: 45px;
-  color: gold;
-}
-@media (max-width: 480px) {
-  .Home #section7::before {
-    height: 40px;
-    top: -35px;
-    left: -40px;
-    line-height: 40px;
+  min-height: 300px;
+  /*
+  &::before{
+      content: "starmatify your home";
+      width: 250px;
+      height: 53px;
+      position: absolute ;
+      top: -45px;
+      left: -45px;
+      background-color:rgb(33, 76, 59);;
+      transform: rotate(20deg);
+      text-align: center;
+      line-height: 45px;
+      color: gold;
+      //transform: translate(0,20px);
+      @media (max-width:480px) {
+          height: 40px;
+          top: -35px;
+          left: -40px;
+          line-height: 40px;
+      }
+
   }
+  */
 }
 .Home .mobileMenu .MenuIcon {
   color: white;

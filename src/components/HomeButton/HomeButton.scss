@@ -1,0 +1,68 @@
+
+.HomeButton {
+    .introVideoContainer {
+      position: absolute;
+      width: 600px;
+      height: 350px;
+      top: 45%;
+      left: 50%;
+      z-index: 20;
+      transform: translate(-50%, -50%);
+      animation: scale  2s;
+
+      @media (max-width: 630px) {
+        width: calc(100% - 22px);
+        top: 22%;
+        height: 260px;
+      }
+      .introVideoContainer2 {
+        position: relative;    
+        .close {
+          position: absolute;
+          top: 5px;
+          right: 3px;
+          z-index: 25;
+          cursor: pointer;
+          color: red;
+          
+          @media (max-width: 630px) {
+            top: 35px;
+            right: 3px;
+          }
+        }
+      }
+      
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  
+  
+  @keyframes scale {
+    0% {
+      width: 200px;
+      height: 90px;
+    }
+    100% {
+      width: 600px;
+      height: 350px;
+    }
+  }
+
+  @media (max-width: 630px) {
+ 
+    @keyframes scale {
+      0% {
+        width: 200px;
+        height: 90px;
+      }
+      100% {
+        width: calc(100% - 22px);
+        height: 260px;
+      }
+    }
+  
+  }
+  

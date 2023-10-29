@@ -1,31 +1,38 @@
 import React ,{useEffect,useState} from 'react';
 import "./Settings.css";
 import Tabs, {Tab} from 'react-best-tabs';
-import {Alert,AlertTitle} from '@mui/material';
 import Wallet from "../Wallet/Wallet"
 import 'react-best-tabs/dist/index.css';
-
-
-
+import {useSelector,useDispatch } from "react-redux";
 import Card from "../../components/Cards/Profile/Profile"
+import Others from '../Others/Others';
+
+
+const data={data1:"Chinaza",data2:"Ogbonna",data3:"Mosesogbonna68@gmail.com",data4:"Calvin: I'm a genius, but I'm a misunderstood genius. Hobbes: What's misunderstood about you? Calvin: Nobody thinks I'm a genius."
+,data5:"0939333333333"}
+
 
 export default function Settings() {
-  const [accountInfo,SetAccountInfo]=useState('')
-  
+  const [accountInfo,SetAccountInfo]=useState(data)
+  const SettingsTab=useSelector(state=> state.SettingsTab)
+  console.log(SettingsTab)
+  const [selectedTab,SetSelectedTab]=useState(SettingsTab)
+
  
 
-
   useEffect(()=>{
-    const data={data1:"Chinaza",data2:"Ogbonna",data3:"Mosesogbonna68@gmail.com",data4:"Calvin: I'm a genius, but I'm a misunderstood genius. Hobbes: What's misunderstood about you? Calvin: Nobody thinks I'm a genius."
-              ,data5:"0939333333333"}
-    SetAccountInfo(data)
-  },[])
+   
+    SetSelectedTab(SettingsTab)
 
+  },[selectedTab , SettingsTab])
+  
   
   return (
     <div className='Settings'>
+      {console.log(SettingsTab)}
+
        <Tabs
-        activeTab="1"
+        activeTab={selectedTab}
         className=""
         ulClassName=""
         activityClassName="bg-success"
@@ -45,11 +52,13 @@ export default function Settings() {
               </div>
           </Tab>
           
-          <Tab title="Logout" className="mr-3">
+          <Tab title="Others" className="mr-3">
               <div className="mt-3">
 
-                  <h1 className="cardHead">Logout</h1>
-                
+                <div className="OthersContainer">
+                    <Others/>
+                </div>
+
               </div>
           </Tab>
          

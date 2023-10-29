@@ -1,46 +1,24 @@
 import './multiPurposeCard.css'
-import React,{useState} from 'react'
+import React from 'react'
 import Button from '../../styledComponent/ButtonNoIcon.styled'
-import Modal1 from "../../materialUI/Modal/PendingJob/PendingJob"
 
 export default function MultiPurposeCard(props) {
-  const [modalStatus, setModalStatus]=useState(false)
+
+
 
   function handleClick(){
-    setModalStatus(true)
     props.handleClickOnViewButtonP(true)
   }
-  function handleCoseModal(){
-    setModalStatus(false)
-  }
 
 
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    pt: 2,
-    px: 4,
-    pb: 3,
-  };
-  //handleClickOnViewButtonP
   return (
   <> 
-
-
-
+    
     {
       props.projectDetailsP?
         "project details"
       :
-
       <> 
-        <Modal1 modalStatusP={modalStatus} styleP={style}  modalStatusFuncP={handleCoseModal}/> 
         <ul className='multiPurposeCard'> 
             <li className='first'>
             
@@ -51,6 +29,7 @@ export default function MultiPurposeCard(props) {
                     <p className='position'>Created: {props.dataP.data1}</p>
                     <p>Expire: {props.dataP.data2}</p>
                 </>
+
               :
               
               <>
@@ -61,13 +40,19 @@ export default function MultiPurposeCard(props) {
                       <p className='date'>{props.dataP.data2}</p>
                       </>
                     :
-                    <>
-                    <h3>{props.dataP.data4}</h3>
-                    <p>{"ID: "+props.dataP.data2}</p>
-                    <p className='date'>{props.dataP.data1}</p>
-                    </>
+                    props.typeP==="Completed"? 
+                      <>
+                        <h3>{props.dataP.data1}</h3>
+                        <p>{"ID: "+props.dataP.data2}</p>
+                        <p className='date'>{props.dataP.data2}</p>
+                      </>
+                        :
+                      <>
+                        <h3>{props.dataP.data4}</h3>
+                        <p>{"ID: "+props.dataP.data2}</p>
+                        <p className='date'>Date:{props.dataP.data1}</p>
+                      </>
                   }
-                
               </>
               }
             
@@ -104,7 +89,7 @@ export default function MultiPurposeCard(props) {
               :
               <>
                   {props.typeP==="active"? 
-                      <>
+                    <>
                       <ul className='button'> 
                         <li>
                             <Button  ColorP="white" buttonColorP={"green"} borderColorP={"white"}  onClick={()=>handleClick()}>         
@@ -157,11 +142,99 @@ export default function MultiPurposeCard(props) {
                         }
                       
                     </ul>
-                  </>
+                    </>
+
                   :
+
+                  props.typeP==="Completed"?
                   <>
-                      <p className={props.dataP.data4==="project payment"?"changeColor p":"p pColor"}>{"NGN " +props.dataP.data3}</p>
-                      <p className='p'>{props.dataP.data5}</p>
+                  <ul className='button'> 
+                    <li>
+                        <Button  ColorP="white" buttonColorP={"green"} borderColorP={"white"}  onClick={()=>handleClick()}>         
+                          <h5>
+                              view
+                          </h5>
+                        </Button>
+                    </li>
+                    <li>
+                        <Button  ColorP="white" buttonColorP={"green"} borderColorP={"white"} >  
+                        {props.dataP.data4===props.dataP.data5?
+                          <h5>
+                            renew
+                          </h5>
+                          :
+                          <h5>
+                              pay
+                          </h5>
+                        }       
+                          
+                        </Button>
+                    </li>
+                  </ul>
+                  <ul className='payment'> 
+
+                    {props.dataP.data4===props.dataP.data5?
+                      <>
+                        <li>
+                          Amount
+                          </li>
+                          <li>
+                          {"NGN "+props.dataP.data4}    
+                        </li> 
+                      </>
+                    :
+                    <>
+                      <li>
+                        Amount
+                        </li>
+                        <li>
+                        {"NGN " + props.dataP.data4}    
+                      </li> 
+                      <li>
+                      Unpaid
+                        </li>
+                        <li>
+                        {"NGN " + props.dataP.data5}    
+                      </li> 
+                    </>
+                    }
+                  
+                </ul>
+                  </>
+                    :
+                  <>
+                      <ul className='button'> 
+                        <li>
+                            
+                        </li>
+                        <li>
+                            <Button  ColorP="white" buttonColorP={"green"} borderColorP={"white"} >  
+                              <h5>
+                                view
+                              </h5>
+                            </Button>
+                        </li>
+                    </ul>
+                    <ul className='payment'> 
+
+                 
+                        <>
+                            <li>
+                            Amount :
+                            </li>
+                            <li>
+                            {"NGN " + props.dataP.data3}    
+                            </li> 
+
+                          <li>
+                          Status :
+                          </li>
+
+                          <li>
+                          { props.dataP.data5}    
+                          </li> 
+                        </>
+                    </ul>
                   </>
                   }
                   

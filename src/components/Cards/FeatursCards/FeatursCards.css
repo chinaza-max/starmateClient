@@ -5,6 +5,23 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  min-height: 290px;
+  overflow: hidden;
+}
+@media (max-width: 1772px) {
+  .FeatursCards {
+    min-height: 771px;
+  }
+}
+@media (max-width: 885px) {
+  .FeatursCards {
+    min-height: 1179px;
+  }
+}
+@media (max-width: 479px) {
+  .FeatursCards {
+    min-height: 2068px;
+  }
 }
 .FeatursCards > li {
   width: 270px;

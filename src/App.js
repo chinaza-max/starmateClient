@@ -13,7 +13,9 @@ import Instant from "./pages/Instant/Instant";
 import Subscription from "./pages/Subscription/Subscription";
 import Container2 from "./layout/Container2/Container2";
 import Container3 from "./layout/Container3/Container3";
-
+import SignInSide from "./pages/SignIn/SignIn";
+import SignUpSide from "./pages/SignUp/SignUp";
+import Container4 from "./layout/Container4/Container3"
 
 
 const NavlinksLogin=[{x:0,data:"Home",data2:"SelectedLink2  active2",data3:0,delay:100,data4:"#homeContainer",data5:"inpage"},
@@ -35,6 +37,9 @@ function App() {
             <Route path="/" element={<Home/>}/>
 
             <Route path="/Home" element={<Navigate  to="/" />}/>
+            <Route path="/Sign-in" element={<SignInSide  to="/" />}/>
+            <Route path="/Sign-up" element={<SignUpSide  to="/" />}/>
+
 
             <Route path="/Home" element={<Container1/>}>
               <Route path="/Home/Dashboard" element={<Dashboard/>}/>
@@ -50,6 +55,8 @@ function App() {
             </Route>
             <Route path="/Home" element={<Container3/>}>
               <Route path="/Home/Affiliate" element={<Affiliate/>}/>
+            </Route>
+            <Route path="/Home" element={<Container4/>}>
               <Route path="/Home/Gallery" element={<Gallery/>} />  
             </Route>
            

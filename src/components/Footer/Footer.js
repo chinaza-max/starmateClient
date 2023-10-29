@@ -5,8 +5,8 @@ import img from "../../images/starmatelogo.png";
 import img2 from "../../images/social1.jpg";
 import img3 from "../../images/social2.jpg";
 import img4 from "../../images/social4.png";
-
-
+import FlexRow from "../styledComponent/Flexrow.styled"
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 //icons
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -27,11 +27,7 @@ export default function Footer() {
                 With our platform and everything we have put in place for your security and that of your valuables, you can be rest assured! Our platform allows you to meet, keep tabs and view the background information of the staff that have been assigned to your project. <br/>You can also assign supervisors to monitor your projects on the go.
                 </p>
 
-                <ul>
-                    <li><a href='#'><img src={img2}/></a></li>
-                    <li><a href='#'><img src={img3}/></a></li>
-                    <li><a href='#'><img src={img4}/></a></li>
-                </ul>
+                
 
             </li>
             <li className='contactContainer'>
@@ -60,18 +56,47 @@ export default function Footer() {
             <li className='Links'>
                 <h2>Link</h2>
                 <div> 
-                    <Link to={"#"}> FAQs</Link>
+
+                    <FlexRow>
+                        <li>
+                            <DoubleArrowIcon/>
+                        </li>
+                        <li>
+                            <Link to={"#"}>FAQs</Link>
+                        </li>
+                    </FlexRow>
+                    
                 </div>
                 <div> 
-                    <Link to={"#"}> Terms of use</Link>
+
+                    <FlexRow>
+                        <li>
+                            <DoubleArrowIcon/>
+                        </li>
+                        <li>
+                            <Link to={"#"}> Terms of use</Link>
+                        </li>
+                    </FlexRow>
                 </div>
                 <div> 
-                    <Link to={"#"}> Privacy Policy</Link>
+                    <FlexRow>
+                        <li>
+                            <DoubleArrowIcon/>
+                        </li>
+                        <li>
+                            <Link to={"#"}> Privacy Policy</Link>
+                        </li>
+                    </FlexRow>
                 </div>
             </li>
         </ul>
-        <div>
-            <span> contact developer-081888889</span>
+
+        <div className='socialContainer'>
+            <ul className='social'>
+                <li><a href='#'><img src={img2}/></a></li>
+                <li><a href='#'><img src={img3}/></a></li>
+                <li><a href='#'><img src={img4}/></a></li>
+            </ul>
         </div>
     </div>
   )

@@ -61,9 +61,7 @@ export default function Container1() {
                 
                 <BottomNav funcP={moveUp}/>
             </div>
-            <div id='Container1Section4'  style={FooterTheme}>
-                <Footer />
-            </div>
+           
         
         </div>
     )

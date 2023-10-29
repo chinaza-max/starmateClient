@@ -70,14 +70,53 @@
   text-align: left;
 }
 
-.ProjectDetailsBody > ul > li:nth-child(2) > div {
+/*
+.ProjectDetailsBody >ul >li:nth-child(2) >div {
+
+}
+*/
+.ProjectDetailsBody > ul > li:nth-child(2) .active {
   border: 4px dashed yellow;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  padding-top: 3px;
+  animation: moveBorder 2s linear infinite;
+}
+
+.ProjectDetailsBody > ul > li:nth-child(2) .pending {
+  border: 4px dashed red;
   width: 100px;
   height: 25px;
   text-align: center;
   padding-top: 3px;
 }
 
+.ProjectDetailsBody > ul > li:nth-child(2) .complete {
+  border: 4px dashed green;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  padding-top: 3px;
+}
+
+@keyframes moveBorder {
+  0% {
+    border: 2px dashed transparent;
+  }
+  25% {
+    border: 2px dashed yellow;
+  }
+  50% {
+    border: 2px dashed transparent;
+  }
+  75% {
+    border: 2px dashed yellow;
+  }
+  100% {
+    border: 2px dashed transparent;
+  }
+}
 .ProjectDetailsBody > ul > li:nth-child(2) > p {
   max-height: 140px;
   overflow: auto;

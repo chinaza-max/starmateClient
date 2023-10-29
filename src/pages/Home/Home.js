@@ -2,10 +2,7 @@ import "./Home.css";
 import Nav from "../../components/MainNav/MainNav";
 import {useTheme}  from "../../themeContext";
 import AutoTyping from '../../components/AutoTyping/AutoTyping';
-import Button from "../../components/styledComponent/Button.style";
-import  Form from "../../components/Form/Form";
-import PhoneIcon from '@mui/icons-material/Phone';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import Form from "../../components/Form/Form";
 import Price from "../../components/Price/Price";
 import Slide from "../../components/AchieveMentSlide/AchieveMentSlide";
 import Service  from "../../components/Cards/ServiceCards/ServiceCards";
@@ -30,6 +27,7 @@ import GrassOutlinedIcon from '@mui/icons-material/GrassOutlined';
 
 
 import mobile from "../../images/imageInUse/mobile.png"
+import HomeButton from "../../components/HomeButton/HomeButton";
 
 export default function Home() {
   const darkTheme =useTheme()
@@ -40,14 +38,12 @@ export default function Home() {
   /*
   THEMES
   */
+
   const HomePageTheme={
     backgroundColor:darkTheme?'black':"white",
     color:darkTheme?'black':"black",
   }
-  const buttonTheme={
-    backgroundColor:darkTheme?'black':"rgba(40,89,69,0.6)",
-    color:darkTheme?'black':"green",
-  }
+
 
   const FooterTheme={
     backgroundColor:darkTheme?'black':"#214c3b",
@@ -69,10 +65,10 @@ export default function Home() {
                             {type:"Guarantee your security",description:"With our platform and everything we have put in place for your security and that of your valuables, you can be rest assured! Our platform allows you to meet, keep tabs and view the background information of the staff that have been assigned to your project. You can also assign supervisors to monitor your projects on the go.",icon:VpnKeyRoundedIcon,delay:1000}]
 
 
-  const NavlinksLogin=[{x:0,data:"Home",data2:"SelectedLink2  active2",data3:0,delay:100,data4:"#homeContainer",data5:"inpage"},
-                        {x:0,data:"Gallery",data2:"SelectedLink2",data3:1,delay:200,data4:"/Home/Gallery",data5:""},
-                        {x:0,data:"Dashboard",data2:"SelectedLink2",data3:2,delay:300,data4:"/Home/Dashboard",data5:""},
-                        {x:0,data:"Contact",data2:"SelectedLink2",data3:3,delay:400,data4:"#section7",data5:"inpage"}]
+  const NavlinksLogin=[{x:0,data:"Home",data2:"SelectedLink2  active2",data3:0,delay:0,data4:"#homeContainer",data5:"inpage"},
+                        {x:0,data:"Gallery",data2:"SelectedLink2",data3:1,delay:0,data4:"/Home/Gallery",data5:""},
+                        {x:0,data:"Dashboard",data2:"SelectedLink2",data3:2,delay:0,data4:"/Home/Dashboard",data5:""},
+                        {x:0,data:"Contact",data2:"SelectedLink2",data3:3,delay:0,data4:"#section7",data5:"inpage"}]
 
                         
   const NavlinksNotLogin=[{x:0,data:"Home",data2:"SelectedLink2  active2",data3:0,delay:100,data4:"#homeContainer",data5:"inpage"},
@@ -89,16 +85,14 @@ export default function Home() {
 
   return (
     <div className="Home" style={HomePageTheme} id="homeContainer" >
-
-
+  
     <div className="section-wrap">
-
+        
       <Nav NavlinksLoginP={NavlinksLogin}  NavlinksNotLoginP={NavlinksNotLogin}/>
       <section id="section1">
         <ul>
           <li>
             <div id="Heading">
-
 
                 <h3 id="HeadingContent" > 
 
@@ -112,37 +106,9 @@ export default function Home() {
                   putting your place in order<br/> 
                 </p>
             </div>
-            <div id="button">
-              <ul>
-                <li>
-                  <span id="call">
-                    <Button  id="callButton" ColorP="white" buttonColorP={buttonTheme.backgroundColor} borderColorP={buttonTheme.color} >
-                    
-                    <h5>
-                      <PhoneIcon className="icons"/>
-                      <span>
-                        call us
-                      </span>
-                    </h5>
-                    </Button>
-                  </span>
-                </li>
-                <li>
-                <span id="video">
-                    <Button  id="videoButton" ColorP="white" buttonColorP="transparent" borderColorP={buttonTheme.color}>
-                    <h5>
-                      <PlayCircleOutlineIcon  className="icons"/>
-                      <span>
-                      watch video
-                      </span>
-                    </h5>
-                    </Button>
-                  </span>
-                </li>
 
-              </ul>
-            </div>
-
+        
+            <HomeButton/>
             <Price/>
 
           </li>
@@ -150,6 +116,7 @@ export default function Home() {
               <Form typeP="instant"  ExHeightP2={"910px"}  ExHeightP={"620px"} heightP={"310px"} titleP="instant service request" buttonTypeP="Request a qoute"/>
           </li>
         </ul>
+
       </section>
       
     </div>

@@ -1,18 +1,15 @@
 
 import {useState,useEffect} from "react";
-import Card from "../../components/Cards/multiPurposeCards/multiPurposeCards"
+import Card from "../Cards/multiPurposeCards/MultiPurposeCards"
 import Tabs, {Tab} from 'react-best-tabs';
 import {Alert,AlertTitle} from '@mui/material';
 import ProjectDetails from  "../ProjectDetails/ProjectDetails"
 import Report from  "../Report/Report"
 import Pagination from '@mui/material/Pagination';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import 'react-best-tabs/dist/index.css';
 import "./Project.css"
+import MDatePicker from "../MDatePicker/MDatePicker";
 
 
 export default function Project() {
@@ -20,17 +17,20 @@ export default function Project() {
   const [pendingProject,setPendingProject]=useState('l');
   const [completedProject,setCompletedProject]=useState('h');
   const [projectDetails,setProjectDetails]=useState(false);
+  const [projectDetailsData,setProjectDetailsData]=useState({});
+  const [whatIsInView,setWhatIsInView]=useState("projects");
   const [projectDetailsReport,setProjectDetailsReport]=useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [dateFilter, setDateFilter] = useState("2022/02/02");
+  const [activeTab, setActiveTab] = useState(1);
 
 
-
-  const data=[{data1:"big joe house",data2:"2/3/2022",data3:"fumigation",data4:"9000",data5:"2000"},
-            {data1:"big joe house",data2:"2/3/2022",data3:"fumigation",data4:"9000",data5:"9000"},
-            {data1:"tery builging",data2:"2/3/2022",data3:"fumigation",data4:"9000",data5:"2200"},
-            {data1:"big joe house",data2:"1/3/2022",data3:"fumigation",data4:"9000",data5:"200"},
-            {data1:"lodo plaza",data2:"2/3/2022",data3:"fumigation",data4:"9000",data5:"200"},
-            {data1:"plaza",data2:"5/3/2022",data3:"fumigation",data4:"9000",data5:"300"}]
+  const data=[{data1:"big joe house",data2:"2022/02/01",data3:"fumigation",data4:"9000",data5:"2000"},
+            {data1:"big joe house",data2:"2022/02/02",data3:"fumigation",data4:"9000",data5:"9000"},
+            {data1:"tery builging",data2:"2022/02/03",data3:"fumigation",data4:"9000",data5:"2200"},
+            {data1:"big joe house",data2:"2022/02/04",data3:"fumigation",data4:"9000",data5:"200"},
+            {data1:"lodo plaza",data2:"2022/02/05",data3:"fumigation",data4:"9000",data5:"200"},
+            {data1:"plaza",data2:"2022/02/06",data3:"fumigation",data4:"9000",data5:"300"}]
   
   const data1=[{data1:"2/3/2022",data2:"2/3/2022",data3:"big joe house",data4:"fumigation",data5:"NGN 9000"},
             {data1:"2/3/2022",data2:"2/3/2022",data3:"big joe house",data4:"fumigation",data5:"NGN 9000"},
@@ -39,21 +39,56 @@ export default function Project() {
             {data1:"2/3/2022",data2:"2/3/2022",data3:"big joe house",data4:"fumigation",data5:"NGN 9000"},
             {data1:"2/3/2022",data2:"5/3/2022",data3:"big joe house",data4:"fumigation",data5:"NGN 9000"}]
           
+    
+
+
+            
+    const handleSetActiveTab=(val)=>{
+      setActiveTab(val)  
+    }
+    const handleDateChange=(val)=>{
+      setDateFilter(val)  
+    }
+
+
+    const handleSetProjectDetailsReport=(value)=>{
+
+      setWhatIsInView("report")
+      setProjectDetailsReport(value)
+      if(value===false){
+        setWhatIsInView("project")
+      }
+
+    }
+
 
     const handleClickOnViewButton=(value)=>{
       localStorage.setItem("details_page_display_status",value)
+      setProjectDetailsData({type:"active"})
       setProjectDetails(value)
+      if(value===false){
+        setWhatIsInView("project")
+      }
+      else{
+        setWhatIsInView("projectDetails")
+
+      }
     }
 
     const handleClickOnViewButton2=(value)=>{
-     // localStorage.setItem("details_page_display_status",value)
-      setProjectDetailsReport(value)
+      localStorage.setItem("details_page_display_status",value)
+      setProjectDetailsData({type:"pending"})
+      setProjectDetails(value)
+    } 
+
+    const handleClickOnViewButton3=(value)=>{
+      localStorage.setItem("details_page_display_status",value)
+      setProjectDetailsData({type:"completed"})
+      setProjectDetails(value)
     }
 
 
     const handlePageChange = (event, page) => {
-
-      console.log(page)
       setCurrentPage(page);
     };
 
@@ -62,14 +97,14 @@ export default function Project() {
     useEffect(()=>{
         let details_page_display_status=localStorage.getItem("details_page_display_status")
 
-        if(details_page_display_status===null||details_page_display_status==="false"){
+        if(details_page_display_status===null||details_page_display_status==="false"||details_page_display_status==="undefined"){
           setProjectDetails(false)
         }
         else{
           setProjectDetails(true)
         }
         
-    },[projectDetails,projectDetailsReport])
+    },[projectDetails,projectDetailsReport,activeTab])
 
 
   return (
@@ -78,50 +113,48 @@ export default function Project() {
 
     {projectDetailsReport ?
     
-      <Report  handleClickOnViewButton2P={handleClickOnViewButton2} /> 
+      <Report    handleSetProjectDetailsReportP={handleSetProjectDetailsReport} whatIsInViewP={whatIsInView}  /> 
     :
-
+   
     <> 
 
         {projectDetails ?
-              <ProjectDetails handleClickOnViewButton2P={handleClickOnViewButton2}  handleClickOnViewButtonP={handleClickOnViewButton}/> 
+              <ProjectDetails projectDetailsDataP={projectDetailsData} 
+                handleSetProjectDetailsReportP={handleSetProjectDetailsReport} 
+                handleClickOnViewButtonP={handleClickOnViewButton} whatIsInViewP={whatIsInView}   /> 
               :
               <Tabs
-              activeTab="1"
+              activeTab={activeTab}
               className=""
               ulClassName=""
               activityClassName="bg-success"
-              onClick={(event, tab) => console.log(event, tab)}
+              onClick={(event, tab) =>  handleSetActiveTab(tab)}
             >
                 <Tab title="Active" className="mr-3">
                     <div className="mt-3">
       
                       {activeProject?
                           <div className='projectMobile'>
-                          <h1 className="cardHead">Active project</h1>
+                            <h1 className="cardHead">Active project</h1>
+
+                            <Card dataP={data} typeP="active" projectDetailsP={projectDetails} handleClickOnViewButtonP={handleClickOnViewButton}  />
+
+                            <div className="Pagination">
 
 
-                          <Card dataP={data} typeP="active" projectDetailsP={projectDetails} handleClickOnViewButtonP={handleClickOnViewButton}  />
+                              { data.length>10
 
+                                ?
+                                <Pagination count={10} page={currentPage} onChange={handlePageChange}  color="primary"   />
 
+                                :
+                                <Pagination count={10} page={currentPage} disabled onChange={handlePageChange}  color="primary"   />
 
-                          <div className="Pagination">
+                              }
 
+                            </div>
 
-                            { data.length>10
-
-                              ?
-                              <Pagination count={10} page={currentPage} onChange={handlePageChange}  color="primary"   />
-
-                              :
-                              <Pagination count={10} page={currentPage} disabled onChange={handlePageChange}  color="primary"   />
-
-                            }
-
-                          </div>
-
-
-                        </div> 
+                          </div> 
                       :
                       <Alert severity="info" className="empty">
                       <AlertTitle>Info</AlertTitle>
@@ -136,9 +169,7 @@ export default function Project() {
                       {pendingProject?
                         <div className='projectMobile'>
                         <h1 className="cardHead">Pending project</h1>
-                        <Card dataP={data1} typeP="Pending" />
-
-
+                        <Card dataP={data1} typeP="Pending"  handleClickOnViewButtonP={handleClickOnViewButton2}  />
 
                         <div className="Pagination">
 
@@ -173,16 +204,13 @@ export default function Project() {
 
                               </h1>
 
-                              <div className="datePicker">
-                                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                  <DemoContainer components={['DatePicker']}>
-                                    <DatePicker label="Basic date picker" />
-                                  </DemoContainer>
-                                </LocalizationProvider>
+                              <div className="datePickerContainer">
+                                <div className="datePickerContainerPosition">
+                                  <MDatePicker handleDateChangeP={handleDateChange} className="datePicker"/>
+                                </div>
                               </div>
 
-                              
-                              <Card dataP={data1} typeP="Pending" />
+                              <Card dataP={data} typeP="Completed" dateFilterP={dateFilter}  handleClickOnViewButtonP={handleClickOnViewButton3}  />
                                
 
                               <div className="Pagination">
@@ -219,4 +247,3 @@ export default function Project() {
   </div>
   )
 }
-//npm i @mui/x-date-pickers

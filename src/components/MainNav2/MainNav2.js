@@ -12,7 +12,7 @@ export default function MainNav2(props) {
     const isLoggedIn=useSelector(state=> state.isLoggedIn)
     const transition=useTransition(items,{
         config:{ mass: 1, tension: 280, friction: 60 },
-        from:{x:100,y:50,opacity:0},
+        from:{x:10,y:20,opacity:0},
         enter:item=>(next)=>(
           next({x:item.x,y:0,opacity:1,delay:item.delay})
         ),

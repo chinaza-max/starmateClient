@@ -59,9 +59,16 @@ $sizeNavTextPhone:12px;
             position: relative;
             span{
                 position: absolute;
-                right: -10px;
-                top: -4px;
-                color: red;
+                right: -13px;
+                top: -13px;
+                line-height: 8px;
+                color: white;
+                background-color: red;
+                border-radius: 50%;
+                padding: 5px;
+                width: 7px; 
+                height: 7px;
+                text-align: center;
             }
         }
         p:hover{

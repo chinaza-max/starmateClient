@@ -8,6 +8,7 @@
     .transactionMobile{
         margin-top: 20px;
         font-size: 20px;
+       
     }
     .empty{
         margin-top: 50px;
@@ -23,5 +24,22 @@
     }
     @media (max-width:480px) {
         width: 97%;
+        margin-top: 105px;
+    }
+    .Pagination{
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+    } 
+    .datePickerContainer{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        .datePickerContainerPosition{
+         margin-bottom: 25px;
+         margin-top: 20px;
+        }
     }
 }

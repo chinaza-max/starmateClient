@@ -5,7 +5,9 @@
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 120px;
-
+    .OthersContainer{ 
+        margin-top: 40px;
+    }
     @media (max-width:860px) {
         width: 680px;
     }

@@ -14,10 +14,15 @@
   margin-top: 20px;
   font-size: 20px;
 }
-.Project .datePicker {
-  width: -moz-fit-content;
-  width: fit-content;
+.Project .datePickerContainer {
+  width: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.Project .datePickerContainer .datePickerContainerPosition {
+  margin-bottom: 25px;
+  margin-top: 20px;
 }
 @media (max-width: 860px) {
   .Project {
@@ -29,7 +34,7 @@
     width: 580px;
   }
 }
-@media (max-width: 860px) {
+@media (max-width: 502px) {
   .Project {
     margin-top: 105px;
   }
@@ -50,4 +55,5 @@
   text-align: center;
   margin: 0 auto;
   margin-top: 30px;
+  overflow: hidden;
 }/*# sourceMappingURL=Project.css.map */

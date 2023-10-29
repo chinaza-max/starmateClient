@@ -24,6 +24,8 @@ export default function Container2() {
                         {x:0,data:"Subscribe Now",data2:"SelectedLink2",data3:1,delay:200,data4:"/Home/Subscription",data5:""},
                         {x:0,data:"Affiliate",data2:"SelectedLink2",data3:2,delay:300,data4:"/Home/Affiliate",data5:""}]
 
+
+                        
   return (
     <div className='Container2'>
         <div className='Container2Section1'>
@@ -48,9 +50,7 @@ export default function Container2() {
         <div className='Container2Section3'>
           <BottomNav/>
         </div>
-      <div className='Container2Section4'  style={FooterTheme}>
-          <Footer/>
-      </div>
+     
     </div>
   )
 }

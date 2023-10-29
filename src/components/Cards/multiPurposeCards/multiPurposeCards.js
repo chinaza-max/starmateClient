@@ -1,14 +1,15 @@
 import './multiPurposeCards.css'
+import React from 'react'
 import MultiPurposeCard from "../multiPurposeCard/multiPurposeCard"
 
 
 
-export default function multiPurposeCards(props) {
+export default function MultiPurposeCards(props) {
 
 
   const content=props.dataP.map((data,index)=>{
       return(
-          <MultiPurposeCard key={index} dataP={data}  projectDetailsP={props.projectDetailsP} handleClickOnViewButtonP={props.handleClickOnViewButtonP} typeP={props.typeP}/>
+          <MultiPurposeCard dateFilterP={props.dateFilterP} key={index} dataP={data}  projectDetailsP={props.projectDetailsP} handleClickOnViewButtonP={props.handleClickOnViewButtonP} typeP={props.typeP}/>
       )
   })  
 

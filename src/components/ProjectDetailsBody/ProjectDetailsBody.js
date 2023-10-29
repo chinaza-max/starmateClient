@@ -7,7 +7,10 @@ import Image2 from '../../images/download (1).jpg'
 
 
 
-export default function ProjectDetailsBody() {
+export default function ProjectDetailsBody(props) {
+
+
+
   return (
     <div  className='ProjectDetailsBody'>
         <ul>
@@ -15,7 +18,16 @@ export default function ProjectDetailsBody() {
             <h4>Status : </h4>
             </li>
             <li>
-                <div>On going</div>
+                {
+                    props.projectDetailsDataP.type==="active"?   
+                        <div className='active'>On going</div>
+                    :
+                    props.projectDetailsDataP.type==="pending"?
+                        <div className='pending'>Pending</div>
+                    :
+                        <div className='complete'>Completed</div>
+
+                }
             </li>
         </ul>
         <ul>
@@ -92,7 +104,44 @@ export default function ProjectDetailsBody() {
             
 
         <div className='buttons'>
-            <ul>
+
+            {
+                props.projectDetailsDataP.type==="active"
+                
+                ?
+                <ul>
+                    <li>
+                        <Button borderColorP={"red"} buttonColorP={"red"}  ColorP={"white"}> quote</Button>
+                    </li>
+                    <li> 
+                        <Button borderColorP={"blue"} buttonColorP={"blue"}  ColorP={"white"}> invoice</Button>
+                    </li>
+                    <li> 
+                        <Button borderColorP={"green"} buttonColorP={"green"}  ColorP={"white"}> receipt</Button>
+                    </li>  
+                    <li> 
+                        <Button borderColorP={"gold"} buttonColorP={"gold"}  ColorP={"white"}> pay now</Button>
+                    </li>
+                </ul>
+                :
+
+                props.projectDetailsDataP.type==="pending"
+                    
+                ?
+                <ul>
+                <li>
+                    <Button borderColorP={"red"} buttonColorP={"red"}  ColorP={"white"}> quote</Button>
+                </li>
+                <li> 
+                    <Button borderColorP={"blue"} buttonColorP={"blue"}  ColorP={"white"}> invoice</Button>
+                </li>
+                
+                <li> 
+                    <Button borderColorP={"gold"} buttonColorP={"gold"}  ColorP={"white"}> pay now</Button>
+                </li>
+            </ul>
+                :
+                <ul>
                 <li>
                     <Button borderColorP={"red"} buttonColorP={"red"}  ColorP={"white"}> quote</Button>
                 </li>
@@ -106,6 +155,8 @@ export default function ProjectDetailsBody() {
                     <Button borderColorP={"gold"} buttonColorP={"gold"}  ColorP={"white"}> pay now</Button>
                 </li>
             </ul>
+            }
+           
         </div>
 
 

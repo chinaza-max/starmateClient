@@ -32,5 +32,23 @@
 @media (max-width: 480px) {
   .Transaction {
     width: 97%;
+    margin-top: 105px;
   }
+}
+.Transaction .Pagination {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.Transaction .datePickerContainer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.Transaction .datePickerContainer .datePickerContainerPosition {
+  margin-bottom: 25px;
+  margin-top: 20px;
 }/*# sourceMappingURL=Transaction.css.map */

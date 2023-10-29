@@ -8,6 +8,7 @@ export default function NavLinks(props) {
     const content=props.NavDetailsP.map((data,index)=>{
 
         if(data==="outPage"){
+
             return(
                 <li key={index}>
                     <Link to={data.data4} activeclassname={data.data2}>
@@ -16,15 +17,21 @@ export default function NavLinks(props) {
                         </p>  
                     </Link>
                 </li>
-            )
+            )  
         }else{
 
+            console.log("ss")
             return(
                 <li key={index}>
                     <NavLink to={data.data4} activeclassname={data.data2}>
                         <p> 
                             {data.data}
-                            <span>{data.data6}</span>
+                            {
+                                data.data==="Notification"?
+                                    <span>{data.data6}</span>
+                                :
+                                    ""
+                            }
                         </p>  
                     </NavLink>
                 </li>
@@ -37,8 +44,6 @@ export default function NavLinks(props) {
     
     <ul className="NavLinks" role="navigation">
         {content}
-
-       
     </ul>
   )
 }

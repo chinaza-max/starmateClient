@@ -205,7 +205,10 @@ export default function Report(props) {
   return (
     <div className='Report'>
 
-      <SubnavBar  nameP={"Name of building"} rightContentP={false}    handleBackArrowP={props.handleClickOnViewButton2P} handleViewReportP={""}/> 
+      <SubnavBar   handleSetProjectDetailsP={props.handleSetProjectDetailsP}
+              nameP={"Name of building"} rightContentP={false}    
+              handleViewReportP={""} whatIsInViewP={props.whatIsInViewP}
+              handleSetProjectDetailsReportP={props.handleSetProjectDetailsReportP} /> 
 
       {
         isRecording===true?
@@ -238,8 +241,8 @@ export default function Report(props) {
             ))}
           </Box>
         
-          <Box sx={{ p: 2, backgroundColor: "background.default" }}>
-            <Grid container spacing={2}>
+          <Box className='inputSection' sx={{ p: 2, backgroundColor: "background.default" }}>
+            <Grid container spacing={2} >
               <Grid item xs={2}>
                 <div className='fileIcon' onClick={()=>{setOpen((value)=>!value)}}>
                   <RadialMenu isRecordingHndleP={isRecordingHndle} startRecordingHandlerP={startRecordingHandler} handleIconClickP={handleIconClick}  openP={open}/>
@@ -338,7 +341,9 @@ const Message = ({ message }) => {
                   </div>  
                  :
                   <div className="imageContainer">
-                    <iframe src={message.url} ></iframe>
+                    <iframe src={message.url}
+                      title="image"
+                      ></iframe>
                   </div>       
 
           }

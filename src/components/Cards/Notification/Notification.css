@@ -15,10 +15,15 @@
 }
 .Notification .first h2 {
   margin-bottom: 2px;
+  margin-left: 30px;
 }
 .Notification .first .date {
   position: absolute;
   bottom: 10px;
+}
+.Notification .first .icon {
+  position: absolute;
+  top: 0px;
 }
 .Notification .second {
   margin-top: 50px;

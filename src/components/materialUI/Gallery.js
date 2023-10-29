@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import { PhotoSlider } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-
+import "./Gallery.css"
 
 
 
@@ -34,7 +34,7 @@ export default function QuiltedImageList(props) {
   };
 */
   return (
-    <>
+    <div className='Gallery'>
     <ImageList
       variant="quilted"
       cols={4}
@@ -42,7 +42,7 @@ export default function QuiltedImageList(props) {
     >
       {props.itemDataP.map((item,index) => (
         <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-          <img
+          <img  
             {...srcset(item.img, 121, item.rows, item.cols)}
             alt={item.title}
             onClick={ () => openImageViewer(index) }
@@ -64,7 +64,8 @@ export default function QuiltedImageList(props) {
       ))}
 
       </ImageList>
-      <PhotoSlider
+
+      <PhotoSlider className="imagePreview"
       images={props.itemDataP2.map((item) => ({ src: item, key: item }))}
       visible={isViewerOpen}
       onClose={() => setIsViewerOpen(false)}
@@ -72,6 +73,6 @@ export default function QuiltedImageList(props) {
       onIndexChange={setCurrentImage}
     />
     
-    </>
+    </div>
   );
 }

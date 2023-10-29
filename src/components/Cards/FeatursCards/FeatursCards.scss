@@ -14,6 +14,17 @@ $colorHover3: rgb(231, 228, 228);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    min-height: 290px;
+    overflow: hidden;
+    @media (max-width:1772px) {
+        min-height: 771px;
+    }
+    @media (max-width:885px) {
+        min-height: 1179px;
+    }
+    @media (max-width:479px) {
+        min-height: 2068px;
+    }
     >li{
         width:270px;
         height:325px;

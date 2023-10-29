@@ -6,7 +6,7 @@ import Table2 from "../../components/MyTable/Tables2/Tables2";
 import Table3 from "../../components/MyTable/Tables3/Tables3";
 import Alert from '@mui/material/Alert';
 import Card from '../../components/materialUI/Card/Card';
-import Card2 from "../../components/Cards/multiPurposeCards/multiPurposeCards"
+import Card2 from "../../components/Cards/multiPurposeCards/MultiPurposeCards"
 import {useState} from "react";
 
 
@@ -133,6 +133,8 @@ export default function Dashboard() {
             }
           </li>
       </ul>
+
+      
     </div>
   )
 }

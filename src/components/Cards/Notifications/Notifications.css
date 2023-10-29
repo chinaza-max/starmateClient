@@ -1,3 +1,39 @@
 .multiPurposeCards {
   margin-top: 20px;
+}
+
+.Notifications .dropDownContainer {
+  height: 40px;
+  display: flex;
+  justify-content: right;
+}
+.Notifications .dropDownContainer .dropDown {
+  height: 30px;
+}
+.Notifications .dropDownContainer .dropDown button {
+  min-width: auto;
+  width: 200px;
+}
+.Notifications .dropDownContainer .dropDown .MuiSelect-popper div ul {
+  min-width: auto;
+  width: 100px;
+}
+.Notifications .dropDownContainer .dropDown .MuiSelect-popper div ul li {
+  min-width: auto;
+  width: 200px;
+}
+@media (max-width: 501px) {
+  .Notifications .dropDownContainer .dropDown button {
+    width: 160px;
+    min-width: 180px;
+  }
+}
+
+.MuiSelect-popper div ul {
+  min-width: auto;
+  width: 100px;
+}
+.MuiSelect-popper div ul li {
+  min-width: auto;
+  width: 200px;
 }/*# sourceMappingURL=Notifications.css.map */
