@@ -2,7 +2,7 @@ import './Transaction.css';
 import Tabs, {Tab} from 'react-best-tabs';
 import {Alert,AlertTitle} from '@mui/material';
 import 'react-best-tabs/dist/index.css';
-import {useEffect,useState} from "react";
+import {useState} from "react";
 import Pagination from '@mui/material/Pagination';
 
 import Card from "../../components/Cards/multiPurposeCards/MultiPurposeCards"

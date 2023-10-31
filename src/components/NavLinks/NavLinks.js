@@ -20,7 +20,6 @@ export default function NavLinks(props) {
             )  
         }else{
 
-            console.log("ss")
             return(
                 <li key={index}>
                     <NavLink to={data.data4} activeclassname={data.data2}>
